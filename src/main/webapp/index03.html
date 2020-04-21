@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery02</title>
+    <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js" ></script>
+</head>
+<body>
+<h1>this is jquery index page.</h1>
+
+<button id="btn1">ul li1</button>
+
+<ol>
+    <li>打开冰箱门</li>
+    <li>把大象装进去</li>
+    <li>关闭冰箱门</li>
+</ol>
+
+<ul>
+    <li>java</li>
+    <li>html5</li>
+    <li>testing</li>
+    <li>ui</li>
+    <li>python</li>
+</ul>
+
+<ul>
+    <li>array</li>
+    <li>list</li>
+    <li>set</li>
+    <li>map</li>
+    <li>properties</li>
+</ul>
+
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("ul li:first-child").css("background-color","pink");
+        })
+    });
+</script>
+</body>
+</html>

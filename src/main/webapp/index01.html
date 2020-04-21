@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery01</title>
+    <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
+</head>
+<body>
+    <h1>this is jquery index page</h1>
+
+    <input type="button" value="clickme" onclick="abc()" />
+    <button id="btn2">jquery button</button>
+
+    <p id="p1" style="background-color: gray">hello1</p>
+    <p>hello2</p>
+    <p class="abc">hello3</p>
+    <h3 class="abc">hello4</h3>
+
+<script>
+    /*原生js事件：需要在标签上添加方法*/
+    function abc() {
+        alert("hello")
+    }
+
+    /*jqery事件：只需加载主体后加载即可*/
+    $(document).ready(
+
+        /*与js的区别：
+        *   1，事件与内容的分离不同
+        *   2，选择器的不同
+        * */
+        function () {
+
+            $("#btn2").click(function () {
+                //alert("hello");
+
+                /*选择器的不同*/
+                $(".abc").hide();
+                //$("#p1").hide();
+                //$("p").hide();
+
+                /*css（）参数的个数不同的区别*/
+                //alert($("p1").css("background-color"));
+                //$("p").css("background-color","pink");
+
+            })
+        }
+
+
+
+
+
+    );
+</script>
+</body>
+</html>
